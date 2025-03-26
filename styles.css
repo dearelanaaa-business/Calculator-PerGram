@@ -1,5 +1,5 @@
 body {
-    font-family: Inter, sans-serif;
+    font-family: Inter, sans-serif; /* Match Notion font */
     background-color: white;
     display: flex;
     justify-content: center;
@@ -8,45 +8,39 @@ body {
     margin: 0;
 }
 
-.container {
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-.input-group {
+#calculator-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 15px;
+    width: 300px;
+    gap: 10px;
 }
 
 label {
+    text-align: center;
     font-size: 14px;
-    margin-bottom: 5px;
 }
 
 input {
-    width: 100%;
-    max-width: 250px;
     padding: 8px;
     font-size: 14px;
-    text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-align: center;
 }
 
-/* Remove up/down arrows from number input */
+input[readonly] {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Remove up and down arrows for number input fields */
 input[type=number] {
     -moz-appearance: textfield;
+    -webkit-appearance: none;
 }
 
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
