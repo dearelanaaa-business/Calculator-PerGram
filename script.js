@@ -27,3 +27,4 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('costPrice').addEventListener('input', calculateGramPrices);
     document.getElementById('quantity').addEventListener('input', calculateGramPrices);
 });
+
