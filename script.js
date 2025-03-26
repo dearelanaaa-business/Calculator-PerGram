@@ -26,5 +26,25 @@ document.addEventListener("DOMContentLoaded", function() {
     
     document.getElementById('costPrice').addEventListener('input', calculateGramPrices);
     document.getElementById('quantity').addEventListener('input', calculateGramPrices);
+    
+    document.body.style.fontFamily = "ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif"; // Match Notion font
+    document.body.style.lineHeight = "1.6"; // Improve readability
+    document.body.style.display = "flex";
+    document.body.style.justifyContent = "center";
+    document.body.style.alignItems = "center";
+    document.body.style.height = "100vh";
+    document.body.style.backgroundColor = "#ffffff"; // White background
+    
+    // Remove up and down arrows for number inputs
+    document.querySelectorAll('input[type=number]').forEach(input => {
+        input.style.webkitAppearance = "none";
+        input.style.mozAppearance = "textfield";
+    });
+    
+    // Set greyish placeholder for output fields
+    document.querySelectorAll('input[readonly]').forEach(output => {
+        output.style.backgroundColor = "#f0f0f0";
+        output.style.color = "#333";
+        output.style.fontWeight = "bold";
+    });
 });
-
