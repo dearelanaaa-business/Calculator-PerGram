@@ -1,0 +1,46 @@
+body {
+    font-family: Inter, sans-serif; /* Match Notion font */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#calculator-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+
+label {
+    text-align: center;
+    font-size: 14px;
+}
+
+input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input[readonly] {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Remove up and down arrows for number input fields */
+input[type=number] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
