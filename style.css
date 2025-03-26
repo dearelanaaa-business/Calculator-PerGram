@@ -1,46 +1,55 @@
 body {
-    font-family: Inter, sans-serif; /* Match Notion font */
-    background-color: white;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #ffffff;
     margin: 0;
 }
 
-#calculator-container {
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    gap: 10px;
+    align-items: center; /* Align content in the middle */
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
 label {
+    display: block;
     text-align: center;
+    margin: 10px 0 5px;
     font-size: 14px;
 }
 
 input {
+    width: 100%;
+    max-width: 250px; /* Ensure the inputs are centered */
     padding: 8px;
-    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 14px;
     text-align: center;
 }
 
 input[readonly] {
     background-color: #f0f0f0;
+    font-weight: bold;
     color: #333;
 }
 
-/* Remove up and down arrows for number input fields */
-input[type=number] {
-    -moz-appearance: textfield;
-    -webkit-appearance: none;
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
